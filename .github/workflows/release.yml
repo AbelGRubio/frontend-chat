@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - master  # o main si tu rama principal es main
+      - main
 
 jobs:
   release:
