@@ -1,0 +1,357 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --accent: #2337ff;
+	--accent-dark: #000d8a;
+	--black: 15, 18, 25;
+	--gray: 96, 115, 159;
+	--gray-light: 229, 233, 240;
+	--gray-dark: 34, 41, 57;
+	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	--box-shadow:
+		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+		0 16px 32px rgba(var(--gray), 33%);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Aplica a toda la página */
+::-webkit-scrollbar {
+  width: 6px; /* Ancho de la barra */
+  height: 6px; /* Alto de la barra (para desplazamiento horizontal) */
+}
+
+/* Estiliza el "track" (la parte fija detrás del thumb) */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0); /* Hace el fondo transparente */
+  box-shadow: none;
+  border: none;
+}
+
+/* Estiliza el "thumb" (la parte que se mueve) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del thumb */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Cuando se pase el mouse por encima */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Opcional: ocultar la scrollbar en Firefox */
+* {
+  scrollbar-width: thin; /* Hace que la barra sea más delgada */
+  scrollbar-color: #888 rgba(0, 0, 0, 0); /* Color del thumb y del fondo */
+}
+
+
+.bg-gray-cs {
+  background: #333333;
+}
+
+.bg-blue-cs {
+  background: #3498DB;
+}
+
+.btn-normal-pp{
+  @apply border py-2 px-6 rounded-sm shadow-md transition duration-300
+}
+
+.btn-blue-400{
+  @apply border-blue-400 text-blue-400 hover:border-blue-400 hover:bg-blue-400 hover:text-white
+}
+
+.btn-blue-400-reverse{
+  @apply  border-blue-400 bg-blue-400 text-white hover:bg-blue-300 hover:border-blue-300 }
+
+
+.btn-h-w{
+  @apply px-4 py-2 border border-white text-white hover:bg-white hover:text-black transition rounded 
+}
+
+.btn-h-w2{
+  @apply px-4 py-2 bg-white text-black rounded hover:opacity-80 transition
+}
+
+#section-touch {
+  scroll-margin-top: 20px; /* Solución moderna */
+  padding-top: 20px; /* Alternativa compatible */
+  margin-top: -20px; /* Opcional para ajuste fino */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-timeline{
+  color: #B88600;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+h1 {
+  @apply text-5xl font-bold ;
+}
+h2 {
+  @apply text-3xl font-bold ;
+}
+
+h3 {
+  @apply text-3xl font-bold ;
+}
+
+h4 {
+  @apply text-2xl font-bold ;
+}
+
+h5 {
+  @apply text-xl font-bold ;
+}
+
+h6 {
+  @apply text-xl ;
+}
+
+cstrong,
+b {
+	font-weight: 700;
+}
+
+a:hover {
+	@apply text-gray-400;
+} 
+p {
+	margin-bottom: 1em;
+}
+.prose p {
+	margin-bottom: 2em;
+}
+textarea {
+	width: 100%;
+	font-size: 16px;
+}
+input {
+	font-size: 16px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse; /* para que las líneas se vean continuas */
+}
+
+table th {
+  background-color: #e0e0e0; /* gris claro para los headers */
+  color: #333;
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9; /* filas pares con fondo muy claro */
+}
+
+
+.code-block-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.no-wrapper{
+  width: fit-content;
+}
+
+.code-button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  /* padding: 0.5rem; */
+  background-color: #fafafa;
+  border-bottom: 1px solid #ddd;
+}
+
+.code-block-wrapper button {
+  background-color: #f3f3f3;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.toggle-btn {
+  float: left;
+}
+
+.copy-btn {
+  float: right;
+}
+
+pre {
+  padding: 1.5em;
+  border-radius: 8px;
+  overflow-x: auto;
+  background-color: #f6f8fa;
+  /* margin-top: 2.5rem; */
+}
+
+pre > code {
+  all: unset;
+}
+
+blockquote {
+	border-left: 4px solid var(--accent);
+	padding: 0 0 0 20px;
+	margin: 0px;
+	font-size: 1.333em;
+  margin-top: 20px;
+}
+
+
+hr {
+	border: none;
+	border-top: 1px solid rgb(var(--gray-light));
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 1.25rem; /* o usando Tailwind: ml-5 */
+  padding-left: 1rem;
+}
+
+ul li {
+  @apply list-disc ml-5 space-y-2
+}
+
+.prose {
+  @apply max-w-7xl mx-auto p-4;
+}
+
+.prose h2, .prose h3,.prose h4, .prose h5, .prose h6{
+    margin-top: 2rem;    
+    margin-bottom: 1.5rem; 
+}
+
+.title {
+  margin-bottom: 1em;
+  padding: 1em 0;
+  text-align: center;
+  line-height: 1;
+}
+.title h1 {
+  margin: 0 0 0.5em 0;
+}
+.date {
+  margin-bottom: 0.5em;
+  color: rgb(var(--gray));
+}
+.last-updated-on {
+  font-style: italic;
+}
+
+
+
+
+.image-fade {
+  /* position: absolute; */
+  /* opacity: 0; */
+  transition: opacity 1s ease-in-out;
+  width: 800px;
+  /* animation: fadeInOutImage 10s infinite; */
+}
+
+.image2 {
+  animation-delay: 5s;
+}
+
+@keyframes fadeInOutImage {
+  0%   { opacity: 1; }
+  40%  { opacity: 1; }
+  50%  { opacity: 0; }
+  90%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.image-wrapper {
+  margin-top: 20px;
+  position: relative;
+  max-width: 400px;
+  height: auto;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeCarousel 10s infinite;
+}
+
+.carousel img:nth-child(1) {
+  animation-delay: 0s;
+}
+.carousel img:nth-child(2) {
+  animation-delay: 5s;
+}
+
+
+@keyframes fadeCarousel {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  40%  { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 0; }
+}
