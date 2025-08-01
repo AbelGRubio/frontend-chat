@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.2...v1.0.3) (2025-08-01)
+
+
+### Bug Fixes
+
+* **Abel:** added files for create documentarion ([d31ca88](https://github.com/AbelGRubio/frontend-chat/commit/d31ca889a14975d3dad6621911553649474f3817))
+
 ## [1.0.2](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.1...v1.0.2) (2025-08-01)
 
 
