@@ -3,13 +3,31 @@ import { Link } from "react-router-dom";
 import { version } from "../constants";
 import { MenuItem } from "../data/menuItems";
 
+
 interface SidebarProps {
   items: MenuItem[];
+
   onLogout: () => void;
 }
 
+/**
+ * `Sidebar` is a collapsible vertical navigation menu.
+ * 
+ * It displays a list of links, a logout button, and the application version.
+ * The sidebar expands on hover or toggle button click.
+ * 
+ * @param {SidebarProps} props - The props for the component.
+ * @returns {JSX.Element} The rendered sidebar component.
+ */
 export default function Sidebar({ items, onLogout }: SidebarProps) {
+  /**
+   * Indicates whether the sidebar is currently expanded.
+   */
   const [isOpen, setIsOpen] = useState(false);
+
+  /**
+   * Indicates whether the user is hovering over the sidebar.
+   */
   const [isHovering, setIsHovering] = useState(false);
 
   return (
@@ -20,18 +38,17 @@ export default function Sidebar({ items, onLogout }: SidebarProps) {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => {
         setIsHovering(false);
-        // Opcional: cerrar menú al salir, si quieres
-        // setIsOpen(false);
       }}
     >
-      {/* Botón para abrir/cerrar menú (aparece solo si hover o abierto) */}
+      {/* Toggle sidebar button */}
       {(isHovering || isOpen) && (
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="absolute top-2 right-[-14px] w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center text-white shadow-lg"
-          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
-          title={isOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          title={isOpen ? "Close menu" : "Open menu"}
         >
+          {/* Icon changes depending on sidebar state */}
           {isOpen ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +73,7 @@ export default function Sidebar({ items, onLogout }: SidebarProps) {
         </button>
       )}
 
-      {/* Menú */}
+      {/* Navigation menu */}
       <nav className="flex flex-col flex-grow pt-12 px-3">
         {items.map(({ name, path, logo }) => (
           <Link
@@ -68,7 +85,11 @@ export default function Sidebar({ items, onLogout }: SidebarProps) {
             {isOpen && <span className="select-none">{name}</span>}
           </Link>
         ))}
+
+        {/* Spacer to push logout to bottom */}
         <div className="flex-grow" />
+
+        {/* Logout button and version info */}
         <div className="mb-4 text-center">
           <button
             onClick={onLogout}
@@ -91,7 +112,7 @@ export default function Sidebar({ items, onLogout }: SidebarProps) {
             {isOpen && <span>Logout</span>}
           </button>
 
-          {/* Versión del software */}
+          {/* App version */}
           <div className="text-xs text-gray-500 mt-2">
             {version}
           </div>
