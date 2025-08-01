@@ -1,16 +1,6 @@
 // src/hooks/useWebSocket.ts
 import { useEffect, useRef, useState, useCallback } from "react";
 import keycloakInstance from "../services/keycloakService";
-import { jwtDecode } from "jwt-decode";
-
-type KeycloakToken = {
-  sub: string;
-  preferred_username?: string;
-  email?: string;
-  exp?: number;
-  iat?: number;
-};
-
 
 export const useWebSocket = (url: string) => {
   const ws = useRef<WebSocket | null>(null);

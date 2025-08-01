@@ -60,7 +60,7 @@ export const environment = {
 The backend is a Python-based system that stores messages and ensures redundancy via RabbitMQ message queues.  
 Make sure the backend is running and accessible from this frontend.
 
-> Backend repo: [github.com/your-org/backend-messaging-system](#)
+> Backend repo: [github.com/AbelGRubio/frontend-chat](https://github.com/AbelGRubio/backend-chat)
 
 ## License
 

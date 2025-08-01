@@ -1,5 +1,4 @@
-import Keycloak from "keycloak-js";
-
+import Keycloak  from "keycloak-js";
 
 const keycloakOptions = {
   url: import.meta.env.VITE_KEYCLOAK_URL,
@@ -8,32 +7,32 @@ const keycloakOptions = {
 };
 
 const keycloakInstance = new Keycloak(keycloakOptions);
-let authenticated = null;
+let authenticated: boolean | undefined = undefined;
+
 /**
  * Initializes Keycloak and handles authentication.
  */
-export const initKeycloak = async () => {
+export const initKeycloak = async (): Promise<boolean> => {
   try {
     if (!authenticated){
       authenticated = await keycloakInstance.init({
-        onLoad: "login-required", 
+        onLoad: "login-required",
         checkLoginIframe: false,
       });
     }
 
     if (authenticated) {
-      sessionStorage.setItem("token", keycloakInstance.token);
+      sessionStorage.setItem("token", keycloakInstance.token!);
 
       setInterval(async () => {
         if (keycloakInstance.isTokenExpired()) {
-          sessionStorage.setItem("token", keycloakInstance.token);
+          sessionStorage.setItem("token", keycloakInstance.token!);
           await keycloakInstance.updateToken(30);
         }
       }, 30000);
-
     }
 
-    return authenticated;
+    return authenticated as boolean;
   } catch (error) {
     console.error(`Error in Keycloak: ${error}`);
     return false;

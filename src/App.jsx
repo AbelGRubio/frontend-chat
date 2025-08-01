@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import keycloakInstance, { initKeycloak, handleLogout } from "./services/keycloakService";
+import React from 'react';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';

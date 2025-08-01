@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { version } from "../constants";
-
-interface MenuItem {
-  name: string;
-  path: string;
-  logo: Element;
-}
+import { MenuItem } from "../data/menuItems";
 
 interface SidebarProps {
   items: MenuItem[];

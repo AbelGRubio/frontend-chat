@@ -1,6 +1,7 @@
 // src/components/ChatWindow.tsx
+import React from 'react';
 import { useState, FormEvent } from "react";
-import { useWebSocket } from "../hooks/useWebSocket.tsx";
+import { useWebSocket } from "../hooks/useWebSocket";
 
 export default function Home() {
   const [input, setInput] = useState("");
