@@ -3,7 +3,7 @@ name: Build & Deploy Docusaurus Docs
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-docs:
@@ -30,7 +30,7 @@ jobs:
           cd docs
           npm install
           npm run build
-          touch build/.nojekyll
+          
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
