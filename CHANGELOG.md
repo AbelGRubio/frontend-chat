@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.4...v1.0.5) (2025-08-04)
+
+
+### Bug Fixes
+
+* **Abel:** added multiplarform ([e37c207](https://github.com/AbelGRubio/frontend-chat/commit/e37c207115c48182efa413058e2840095d440262))
+
 ## [1.0.4](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.3...v1.0.4) (2025-08-04)
 
 
