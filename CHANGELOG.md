@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.3...v1.0.4) (2025-08-04)
+
+
+### Bug Fixes
+
+* **Abel:** update Dockerfile ([a293090](https://github.com/AbelGRubio/frontend-chat/commit/a2930908bd1718cc342a589587e0359cd6bc9120))
+
 ## [1.0.3](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.2...v1.0.3) (2025-08-01)
 
 
