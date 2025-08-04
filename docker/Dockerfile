@@ -30,7 +30,7 @@ FROM nginx:alpine AS server
 LABEL authors="agrubio"
 
 # instalamos los requeriments necesarios
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html
 COPY --from=builder /app/docker/default.conf /etc/nginx/conf.d/default.conf
 
 # Exponer el puerto por el que Nginx va a servir los archivos
