@@ -55,12 +55,18 @@ export const environment = {
 };
 ```
 
+## Docker 
+
+> Frontend docker: [Frontend chat docker](https://hub.docker.com/repository/docker/agrubio/frontend-chat/general)
+
+
 ## Backend integration
 
 The backend is a Python-based system that stores messages and ensures redundancy via RabbitMQ message queues.  
 Make sure the backend is running and accessible from this frontend.
 
 > Backend repo: [github.com/AbelGRubio/frontend-chat](https://github.com/AbelGRubio/backend-chat)
+> Backend docker: [Backend chat docker](https://hub.docker.com/repository/docker/agrubio/backend-chat/general)
 
 ## License
 
