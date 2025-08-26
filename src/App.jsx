@@ -45,11 +45,12 @@ function App() {
   if (!initialized) {
     return <div>Loading...</div>;
   }
+  const baseUrl = import.meta.env.VITE_BASE_URL || "/";
 
   // If authenticated, show the main layout and routes
   return keycloakInstance && keycloakInstance.authenticated ? (
     <>
-      <Router>
+      <Router basename={baseUrl}>
         <div className="flex h-screen">
           {/* Sidebar with dynamic menu items and logout action */}
           <Sidebar items={menuItems} onLogout={handleLogout} />
@@ -58,6 +59,7 @@ function App() {
           <main className="flex-grow overflow-auto w-full h-full">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/frontend-chat" element={<Home />} />
               {/* Add more routes here as needed */}
             </Routes>
           </main>
