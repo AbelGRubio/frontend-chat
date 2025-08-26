@@ -36,28 +36,23 @@ jobs:
           cd docs
           npm install
           npm run build
-          
+
+      - name: Copy files to temp folder
+        run: |
+          rm -rf deploy_temp
+          mkdir deploy_temp
+          cp -r dist/* deploy_temp/
+          cp -r docs/build deploy_temp/docs
+                
       # --------------------
       # Deploy to GitHub Pages
       # --------------------
-      - name: Deploy to GitHub Pages
+      - name: Deploy all to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: dist           # Vite output
-          keep_files: true              # keep other files like docs
-          force_orphan: true
-          commit_message: 'Deploy chat app'
-
-      - name: Deploy Docusaurus docs
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: docs/build     # Docusaurus output
-          destination_dir: docs         # deploy docs under /docs
+          publish_dir: deploy_temp
           keep_files: true
-          force_orphan: true
           commit_message: 'Deploy Docusaurus docs via GitHub Actions'
 
