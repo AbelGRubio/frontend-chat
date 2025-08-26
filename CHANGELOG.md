@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.8...v1.0.9) (2025-08-26)
+
+
+### Bug Fixes
+
+* **abel:** update relative path ([a0c3500](https://github.com/AbelGRubio/frontend-chat/commit/a0c3500b4a59ec610a344c259a0ef39ba7d14132))
+
 ## [1.0.8](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.7...v1.0.8) (2025-08-26)
 
 
