@@ -46,7 +46,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: dist           # Vite output
-          destination_dir: /            # deploy frontend at root
           keep_files: true              # keep other files like docs
           force_orphan: true
           commit_message: 'Deploy chat app'
