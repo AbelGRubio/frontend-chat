@@ -1,3 +1,10 @@
+## [1.0.12](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.11...v1.0.12) (2025-08-26)
+
+
+### Bug Fixes
+
+* **abel:** update sidebar path ([c2fa756](https://github.com/AbelGRubio/frontend-chat/commit/c2fa7568aa6f882d1516787d340da576c9e5ff8d))
+
 ## [1.0.11](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.10...v1.0.11) (2025-08-26)
 
 
