@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.6...v1.0.7) (2025-08-26)
+
+
+### Bug Fixes
+
+* **abel:** change vite configuration and docs. Added deploy actions in github pages ([28669fd](https://github.com/AbelGRubio/frontend-chat/commit/28669fda0d9366274b31bc3eb4f5845c71179a9c))
+
 ## [1.0.6](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.5...v1.0.6) (2025-08-26)
 
 
