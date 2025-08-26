@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.10...v1.0.11) (2025-08-26)
+
+
+### Bug Fixes
+
+* **abel:** add envirotment vars ([1cccc36](https://github.com/AbelGRubio/frontend-chat/commit/1cccc3633e1da14889bd445ce0299f20f5226b82))
+
 ## [1.0.10](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.9...v1.0.10) (2025-08-26)
 
 
