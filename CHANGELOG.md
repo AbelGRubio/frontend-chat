@@ -1,3 +1,11 @@
+## [1.0.13](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.12...v1.0.13) (2025-08-26)
+
+
+### Bug Fixes
+
+* **abel:** added baseUrl al router ([9c702cd](https://github.com/AbelGRubio/frontend-chat/commit/9c702cd3cf969e33581db5c6910a9a32f40de20e))
+* **Abel:** change path ([b45550c](https://github.com/AbelGRubio/frontend-chat/commit/b45550c2a5517c46d263fd0933f4e2dc9f5161c7))
+
 ## [1.0.12](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.11...v1.0.12) (2025-08-26)
 
 
