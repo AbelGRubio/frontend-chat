@@ -26,6 +26,11 @@ jobs:
       # --------------------
       - name: Build Vite app
         run: npm run build 
+        env:
+          VITE_KEYCLOAK_URL: ${{ secrets.VITE_KEYCLOAK_URL }}
+          VITE_REALM: ${{ secrets.VITE_REALM }}
+          VITE_CLIENT_ID: ${{ secrets.VITE_CLIENT_ID }}
+          VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
 
       # --------------------
       # Build Docusaurus docs
@@ -54,5 +59,5 @@ jobs:
           publish_branch: gh-pages
           publish_dir: deploy_temp
           keep_files: true
-          commit_message: 'Deploy Docusaurus docs via GitHub Actions'
+          commit_message: 'Deploy docs and app via GitHub Actions'
 
