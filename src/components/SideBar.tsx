@@ -29,6 +29,7 @@ export default function Sidebar({ items, onLogout }: SidebarProps) {
    * Indicates whether the user is hovering over the sidebar.
    */
   const [isHovering, setIsHovering] = useState(false);
+  const baseUrl = import.meta.env.VITE_BASE_URL || "/";
 
   return (
     <div
@@ -78,7 +79,7 @@ export default function Sidebar({ items, onLogout }: SidebarProps) {
         {items.map(({ name, path, logo }) => (
           <Link
             key={path}
-            to={path}
+            to={`${baseUrl}${path}`}
             className="flex items-center gap-3 p-2 rounded hover:bg-gray-700 transition-colors"
           >
             <div className="w-6 h-6 flex-shrink-0">{logo}</div>
