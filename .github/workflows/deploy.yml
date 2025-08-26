@@ -1,0 +1,63 @@
+name: Deploy Vite + Docusaurus
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      # --------------------
+      # Build Vite frontend
+      # --------------------
+      - name: Build Vite app
+        run: npm run build 
+
+      # --------------------
+      # Build Docusaurus docs
+      # --------------------
+      - name: Build Docusaurus docs
+        run: |
+          npm run docs
+          cd docs
+          npm install
+          npm run build
+          
+      # --------------------
+      # Deploy to GitHub Pages
+      # --------------------
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist           # Vite output
+          destination_dir: /            # deploy frontend at root
+          keep_files: true              # keep other files like docs
+          force_orphan: true
+          commit_message: 'Deploy chat app'
+
+      - name: Deploy Docusaurus docs
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./docs/build     # Docusaurus output
+          destination_dir: docs         # deploy docs under /docs
+          keep_files: true
+          force_orphan: true
+          commit_message: 'Deploy Docusaurus docs via GitHub Actions'
