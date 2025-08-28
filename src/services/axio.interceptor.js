@@ -8,11 +8,14 @@ import axios from "axios";
 import keycloakInstance from "./keycloakService";
 import { toast } from "sonner";
 
+
+const base_ = `${import.meta.env.VITE_PUBLIC_WS_URL}v1`;
+
 /**
  * Axios instance used for making authenticated HTTP requests to the backend API.
  */
 const api = axios.create({
-  baseURL: "/api",      // Base URL for all API requests
+  baseURL: base_,      // Base URL for all API requests
   timeout: 10000,       // Request timeout (10 seconds)
 });
 

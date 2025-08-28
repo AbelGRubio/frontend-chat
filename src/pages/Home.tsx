@@ -25,6 +25,7 @@ export default function Home() {
    * Retrieved from sessionStorage (previously set during login).
    */
   const token = sessionStorage.getItem("token");
+  const wsUrl = `${import.meta.env.VITE_PUBLIC_WS_URL}?token=${token}`;
 
   /**
    * WebSocket connection and messaging state.
@@ -32,9 +33,7 @@ export default function Home() {
    * - `sendMessage`: function to send a new message
    * - `isConnected`: WebSocket connection status
    */
-  const { messages, sendMessage, isConnected } = useWebSocket(
-    `ws://localhost:8000/ws/messages?token=${token}`
-  );
+  const { messages, sendMessage, isConnected } = useWebSocket(wsUrl);
 
   /**
    * Handles form submission to send a message.
