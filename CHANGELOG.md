@@ -1,3 +1,10 @@
+## [1.0.14](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.13...v1.0.14) (2025-08-26)
+
+
+### Bug Fixes
+
+* **abel:** disabled workflow docs in github actions ([30cbe53](https://github.com/AbelGRubio/frontend-chat/commit/30cbe53ca0c96e84f855e63b90aaea1c6440c1c8))
+
 ## [1.0.13](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.12...v1.0.13) (2025-08-26)
 
 
