@@ -1,3 +1,10 @@
+## [1.0.16](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.15...v1.0.16) (2025-08-28)
+
+
+### Bug Fixes
+
+* **abel:** update uri ([e87ee4c](https://github.com/AbelGRubio/frontend-chat/commit/e87ee4c80aa8eea669e8f6c69c7326a3d5705f7a))
+
 ## [1.0.15](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.14...v1.0.15) (2025-08-28)
 
 
