@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.14...v1.0.15) (2025-08-28)
+
+
+### Bug Fixes
+
+* **abel:** update apis and websockets ([159769e](https://github.com/AbelGRubio/frontend-chat/commit/159769e0c38b5f72e9bb051097363a8c8b791871))
+
 ## [1.0.14](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.13...v1.0.14) (2025-08-26)
 
 
