@@ -9,7 +9,7 @@ import keycloakInstance from "./keycloakService";
 import { toast } from "sonner";
 
 
-const base_ = `${import.meta.env.VITE_PUBLIC_WS_URL}v1`;
+const base_ = `${import.meta.env.VITE_PUBLIC_URL}/v1`;
 
 /**
  * Axios instance used for making authenticated HTTP requests to the backend API.
