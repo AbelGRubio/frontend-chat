@@ -1,3 +1,10 @@
+## [1.0.17](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.16...v1.0.17) (2025-08-28)
+
+
+### Bug Fixes
+
+* **abel:** changed vite var name to VITE_API_URL ([b2d7c4f](https://github.com/AbelGRubio/frontend-chat/commit/b2d7c4fdd56c0638e343f7e6787d253447298b24))
+
 ## [1.0.16](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.15...v1.0.16) (2025-08-28)
 
 
