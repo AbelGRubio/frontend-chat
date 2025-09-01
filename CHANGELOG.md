@@ -1,3 +1,10 @@
+## [1.0.20](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.19...v1.0.20) (2025-09-01)
+
+
+### Bug Fixes
+
+* **abel:** update websocket endpoint ([d663e93](https://github.com/AbelGRubio/frontend-chat/commit/d663e93900554bb8bd76559a64b781ac341939d8))
+
 ## [1.0.19](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.18...v1.0.19) (2025-09-01)
 
 
