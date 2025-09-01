@@ -1,3 +1,10 @@
+## [1.0.18](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.17...v1.0.18) (2025-09-01)
+
+
+### Bug Fixes
+
+* **abel:** added log in home ([34ba5ec](https://github.com/AbelGRubio/frontend-chat/commit/34ba5ecbcbb75558ccd2abe8354f18124a0ccdae))
+
 ## [1.0.17](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.16...v1.0.17) (2025-08-28)
 
 
