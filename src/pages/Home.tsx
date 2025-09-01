@@ -25,7 +25,7 @@ export default function Home() {
    * Retrieved from sessionStorage (previously set during login).
    */
   const token = sessionStorage.getItem("token");
-  const wsUrl = `${import.meta.env.VITE_API_URL}?token=${token}`;
+  const wsUrl = `${import.meta.env.VITE_API_URL}/ws/messages?token=${token}`;
   
   /**
    * WebSocket connection and messaging state.
