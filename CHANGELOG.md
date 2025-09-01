@@ -1,3 +1,10 @@
+## [1.0.19](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.18...v1.0.19) (2025-09-01)
+
+
+### Bug Fixes
+
+* **abel:** update deploy and remove log in home ([f46a39d](https://github.com/AbelGRubio/frontend-chat/commit/f46a39df0d21a550e7296027de9c699c64b0045c))
+
 ## [1.0.18](https://github.com/AbelGRubio/frontend-chat/compare/v1.0.17...v1.0.18) (2025-09-01)
 
 
